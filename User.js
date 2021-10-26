@@ -31,3 +31,19 @@ class BankAccount {
     }
 }
 
+class User {
+    constructor(name, email) {
+        this.name = name;
+        this.email = email;
+        this.account = new BankAccount(2, 0);
+    }
+
+    deposit(amount) {
+        this.account.makeDeposit(amount);
+        return this;
+    }
+
+}
+
+const chris = new User("Chris", "chris@mortr0n.com");
+chris.deposit(100).displayAccountInfo();
