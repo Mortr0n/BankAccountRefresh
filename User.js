@@ -43,7 +43,22 @@ class User {
         return this;
     }
 
+    withdrawal(amount) {
+        this.account.makeWithdrawal(amount);
+        return this;
+    }
+    
+    displayAccount() {
+        this.account.displayAccountInfo();
+        return this;
+    }
+
+    getInterest() {
+        this.account.yieldInterest
+        return this;
+    }
+
 }
 
 const chris = new User("Chris", "chris@mortr0n.com");
-chris.deposit(100).displayAccountInfo();
+chris.deposit(100).displayAccount().getInterest().displayAccount().withdrawal(200).withdrawal(2).displayAccount();

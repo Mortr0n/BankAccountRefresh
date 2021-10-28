@@ -31,3 +31,9 @@ class BankAccount {
     }
 }
 
+const bank = new BankAccount(1, 10);
+const newAccount = new BankAccount(2, 1000);
+bank.makeDeposit(1000).displayAccountInfo().makeWithdrawal(1015).displayAccountInfo().makeWithdrawal(100).displayAccountInfo();
+bank.makeDeposit(2000).makeDeposit(200).makeDeposit(15).makeWithdrawal(35).yieldInterest().displayAccountInfo();
+bank.yieldInterest().displayAccountInfo();
+newAccount.makeDeposit(200).makeDeposit(99).makeWithdrawal(90).makeWithdrawal(87).makeWithdrawal(1000).displayAccountInfo().makeWithdrawal(1000).yieldInterest().displayAccountInfo();
